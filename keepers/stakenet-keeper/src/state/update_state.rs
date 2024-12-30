@@ -65,6 +65,7 @@ pub async fn pre_create_update(
 
     // Update Keeper Balance
     keeper_state.keeper_balance = get_balance_with_retry(client, keypair.pubkey()).await?;
+    println!("keeper_balance: {:?}", keeper_state.keeper_balance);
 
     Ok(())
 }
@@ -105,6 +106,14 @@ pub async fn post_create_update(
     let client = &keeper_config.client;
     let validator_history_program_id = &keeper_config.validator_history_program_id;
     let tip_distribution_program_id = &keeper_config.tip_distribution_program_id;
+    println!(
+        "validator_history_program_id: {}",
+        validator_history_program_id.to_string()
+    );
+    println!(
+        "tip_distribution_program_id: {}",
+        tip_distribution_program_id.to_string()
+    );
 
     // Update Validator History Accounts
     keeper_state.validator_history_map =
@@ -189,6 +198,8 @@ async fn get_cluster_history(
     program_id: &Pubkey,
 ) -> Result<ClusterHistory, Box<dyn Error>> {
     let cluster_history_address = get_cluster_history_address(program_id);
+    println!("{:?}", program_id.to_string());
+    println!("{:?}", cluster_history_address.to_string());
     let cluster_history_account = client.get_account(&cluster_history_address).await?;
     let cluster_history =
         ClusterHistory::try_deserialize(&mut cluster_history_account.data.as_slice())?;

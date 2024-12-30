@@ -51,7 +51,7 @@ pub struct Args {
     #[arg(
         long,
         env,
-        default_value = "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa"
+        default_value = "7yjwkW17yucrkAFDdaP7mriDCVXy2TL6btuqNRVs8guj"
     )]
     pub validator_history_program_id: Pubkey,
 
@@ -60,7 +60,7 @@ pub struct Args {
         short,
         long,
         env,
-        default_value = "4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7"
+        default_value = "F2Zu7QZiTYUhPd7u9ukRVwxh7B71oA3NMJcHuCHc29P2"
     )]
     pub tip_distribution_program_id: Pubkey,
 
@@ -68,7 +68,7 @@ pub struct Args {
     #[arg(
         long,
         env,
-        default_value = "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8"
+        default_value = "DwKrnmi1Zp3z4B3PqPeKkBB4ZZZ2E7gAFh1vi3r77QML"
     )]
     pub steward_program_id: Pubkey,
 

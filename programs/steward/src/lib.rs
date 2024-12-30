@@ -18,7 +18,7 @@ pub mod utils;
 
 pub use state::*;
 
-declare_id!("Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8");
+declare_id!("DwKrnmi1Zp3z4B3PqPeKkBB4ZZZ2E7gAFh1vi3r77QML");
 
 /*
 This program manages the selection of validators and delegation of stake for a SPL Stake Pool.

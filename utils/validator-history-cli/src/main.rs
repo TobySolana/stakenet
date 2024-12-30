@@ -20,12 +20,7 @@ use validator_history::{
 #[command(about = "CLI for validator history program")]
 struct Args {
     /// RPC URL for the cluster
-    #[arg(
-        short,
-        long,
-        env,
-        default_value = "https://api.mainnet-beta.solana.com"
-    )]
+    #[arg(short, long, env, default_value = "https://api.testnet.solana.com")]
     json_rpc_url: String,
 
     #[command(subcommand)]

@@ -20,7 +20,7 @@ pub struct Args {
     #[arg(
         long,
         env,
-        default_value = "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa"
+        default_value = "7yjwkW17yucrkAFDdaP7mriDCVXy2TL6btuqNRVs8guj"
     )]
     pub validator_history_program_id: Pubkey,
 }

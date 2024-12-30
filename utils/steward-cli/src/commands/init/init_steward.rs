@@ -75,6 +75,9 @@ pub async fn command_init_steward(
     };
 
     let blockhash = client.get_latest_blockhash().await?;
+    let slot = client.get_slot().await?;
+    println!("slot: {}", slot);
+    println!("spl_stake_pool: {}", spl_stake_pool::id().to_string());
 
     let configured_ix = configure_instruction(
         &[init_ix],
@@ -93,6 +96,9 @@ pub async fn command_init_steward(
     if args.transaction_parameters.print_tx {
         print_base58_tx(&configured_ix)
     } else {
+        let simulate_res = client.simulate_transaction(&transaction).await?;
+        println!("simulate_res: {:?}", simulate_res.value.logs);
+
         let signature = client
             .send_and_confirm_transaction_with_spinner(&transaction)
             .await?;

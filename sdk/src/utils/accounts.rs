@@ -251,15 +251,18 @@ pub async fn get_all_steward_accounts(
     let reserve_stake_address = stake_pool_account.reserve_stake;
     let reserve_stake_account = client.get_account(&reserve_stake_address).await?;
 
+    let stake_pool_withdraw_authority = get_withdraw_authority_address(&stake_pool_address);
+    let state_account = get_steward_state_account(client, program_id, steward_config).await?;
+
     Ok(Box::new(AllStewardAccounts {
         stake_pool_account,
         config_address: *steward_config,
-        stake_pool_withdraw_authority: get_withdraw_authority_address(&stake_pool_address),
+        stake_pool_withdraw_authority,
         validator_list_account,
         validator_list_address,
         stake_pool_address,
         config_account,
-        state_account: get_steward_state_account(client, program_id, steward_config).await?,
+        state_account,
         state_address: steward_state_address,
         reserve_stake_address,
         reserve_stake_account,

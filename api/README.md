@@ -34,7 +34,7 @@ To view the options available for configuring the API:
 #       --json-rpc-url <JSON_RPC_URL>
 #           RPC url [env: JSON_RPC_URL=] [default: https://api.mainnet-beta.solana.com]
 #       --validator-history-program-id <VALIDATOR_HISTORY_PROGRAM_ID>
-#           Validator history program ID (Pubkey as base58 string) [env: VALIDATOR_HISTORY_PROGRAM_ID=] [default: HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa]
+#           Validator history program ID (Pubkey as base58 string) [env: VALIDATOR_HISTORY_PROGRAM_ID=] [default: 7yjwkW17yucrkAFDdaP7mriDCVXy2TL6btuqNRVs8guj]
 #   -h, --help
 #           Print help
 #   -V, --version

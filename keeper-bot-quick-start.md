@@ -37,13 +37,13 @@ RUST_LOG="info,solana_gossip=error,solana_metrics=info"
 KEYPAIR=./credentials/keypair.json
 
 # Validator history program ID (Pubkey as base58 string)
-VALIDATOR_HISTORY_PROGRAM_ID=HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa
+VALIDATOR_HISTORY_PROGRAM_ID=7yjwkW17yucrkAFDdaP7mriDCVXy2TL6btuqNRVs8guj
 
 # Tip distribution program ID (Pubkey as base58 string)
-TIP_DISTRIBUTION_PROGRAM_ID=4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7
+TIP_DISTRIBUTION_PROGRAM_ID=F2Zu7QZiTYUhPd7u9ukRVwxh7B71oA3NMJcHuCHc29P2
 
 # Steward program ID
-STEWARD_PROGRAM_ID=Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8
+STEWARD_PROGRAM_ID=DwKrnmi1Zp3z4B3PqPeKkBB4ZZZ2E7gAFh1vi3r77QML
 
 # Steward config account for JitoSOL
 STEWARD_CONFIG=jitoVjT9jRUyeXHzvCwzPgHj7yWNRhLcUoXtes4wtjv

@@ -1,16 +1,12 @@
+[toolchain]
+
 [features]
 resolution = false
 skip-lint = false
-[programs.localnet]
-validator_history = "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa"
-steward = "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8"
 
-[workspace]
-members = [
-    "programs/validator-history",
-    "programs/steward",
-]
-exclude = ["keepers", "utils"]
+[programs.localnet]
+steward = "DwKrnmi1Zp3z4B3PqPeKkBB4ZZZ2E7gAFh1vi3r77QML"
+validator_history = "7yjwkW17yucrkAFDdaP7mriDCVXy2TL6btuqNRVs8guj"
 
 [registry]
 url = "https://api.apr.dev"
@@ -18,6 +14,10 @@ url = "https://api.apr.dev"
 [provider]
 cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
+
+[workspace]
+members = ["programs/validator-history", "programs/steward"]
+exclude = ["keepers", "utils"]
 
 [scripts]
 test = "cargo +nightly test"
