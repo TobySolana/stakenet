@@ -14,4 +14,3 @@ test-ledger
 **/config
 **/*.env
 **/.vscode
-/scripts
