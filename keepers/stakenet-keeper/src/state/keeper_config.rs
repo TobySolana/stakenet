@@ -41,8 +41,8 @@ pub struct Args {
     pub gossip_entrypoint: Option<String>,
 
     /// Path to keypair used to pay for account creation and execute transactions
-    #[arg(long, env, default_value = "./credentials/keypair.json")]
-    pub keypair: PathBuf,
+    #[arg(long, env, default_value = "")]
+    pub keypair: String,
 
     /// Path to keypair used specifically for submitting permissioned transactions
     #[arg(long, env)]

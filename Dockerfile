@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN --mount=type=cache,mode=0777,target=/home/root/app/target \
-    --mount=type=cache,mode=0777,target=/usr/local/cargo/registry \
+RUN --mount=type=cache,id=s/0f0a0f09-fa16-40b7-a98f-575b363605e4-/home/root/app/target,target=/home/root/app/target \
+    --mount=type=cache,id=s/0f0a0f09-fa16-40b7-a98f-575b363605e4-/usr/local/cargo/registry,target=/usr/local/cargo/registry \
 	cargo build --release --bin stakenet-keeper
 
 #########
@@ -21,4 +21,3 @@ ENV APP="stakenet-keeper"
 COPY --from=builder /usr/src/app/target/release/$APP ./$APP
 
 ENTRYPOINT ./$APP
- 

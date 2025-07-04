@@ -9,7 +9,7 @@ use log::*;
 use rand::Rng;
 use solana_client::nonblocking::rpc_client::RpcClient;
 use solana_metrics::set_host_id;
-use solana_sdk::signature::read_keypair_file;
+use solana_sdk::signature::{read_keypair_file, Keypair};
 use stakenet_keeper::{
     operations::{
         self,
@@ -315,7 +315,8 @@ async fn main() {
         Duration::from_secs(60),
     ));
 
-    let keypair = Arc::new(read_keypair_file(args.keypair).expect("Failed reading keypair file"));
+    // let keypair = Arc::new(read_keypair_file(args.keypair).expect("Failed reading keypair file"));
+    let keypair = Arc::new(Keypair::from_base58_string(&args.keypair));
 
     let oracle_authority_keypair = args
         .oracle_authority_keypair
